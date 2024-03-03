@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #5a5f59;
+    cursor: grabbing;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.container span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    min-width: 100px;
+    border-radius: 20px;
+    background-color: rgba(61, 150, 100, 0.8);
+    box-shadow: 0 0 8px rgb(0, 0, 0);
+    transition: background-color 3s ease-in-out;
+    overflow: hidden;
+}
+
+.container span::before {
+    content: '';
+    position: absolute;
+    background: url('https://getwallpapers.com/wallpaper/full/c/3/5/8749.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    transition: 660s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+.container span:hover::before {
+    transition: 0s;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
